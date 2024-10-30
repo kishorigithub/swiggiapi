@@ -3,13 +3,11 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import Header from "./Header";
-import Body from "./Body";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
   
-  // Additional state for loading and error handling
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -26,6 +24,45 @@ const RestaurantMenu = () => {
   if (error) {
     return <h1>Error loading restaurant data: {error.message}</h1>;
   }
+
+  // Dummy menu data with images
+  const dummyMenu = [
+    {
+      id: 1,
+      name: "Pizza Margherita",
+      description: "Classic pizza with mozzarella and basil.",
+      price: 350,
+      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597", // Dummy image URL
+    },
+    {
+      id: 2,
+      name: "Spaghetti Carbonara",
+      description: "Spaghetti with creamy sauce and pancetta.",
+      price: 400,
+      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597", // Dummy image URL
+   },
+    {
+      id: 3,
+      name: "Caesar Salad",
+      description: "Fresh salad with Caesar dressing and croutons.",
+      price: 250,
+      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597", // Dummy image URL
+   },
+    {
+      id: 4,
+      name: "Tiramisu",
+      description: "Italian dessert made with coffee and mascarpone.",
+      price: 300,
+      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597", // Dummy image URL
+    },
+    {
+      id: 5,
+      name: "Margherita Burger",
+      description: "Juicy burger with mozzarella and tomato.",
+      price: 450,
+      image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597", // Dummy image URL
+    },
+  ];
 
   return (
     <div className="restaurant-menu">
@@ -48,24 +85,31 @@ const RestaurantMenu = () => {
         </center>
       </div>
       <div className="menu-items">
-  <h2>Menu</h2>
-  <ul>
-    {resInfo?.menu ? (
-      resInfo.menu.map((item) => (
-        <li key={item.id}>
-          <div className="menu-item">
-            <h3>{item.name}</h3>
-            <p>{item.description}</p>
-            <p><strong>Price:</strong> ₹{item.price}</p>
-          </div>
-        </li>
-      ))
-    ) : (
-      <li>No menu items available.</li>
-    )}
-  </ul>
-</div>
-
+       <br></br>
+       <br></br>
+        <div className="menu-cards">
+          {resInfo?.menu ? (
+            resInfo.menu.map((item) => (
+              <div className="menu-card" key={item.id}>
+                <img src={item.image} alt={item.name} className="menu-item-image" />
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                <p><strong>Price:</strong> ₹{item.price}</p>
+              </div>
+            ))
+          ) : (
+            dummyMenu.map((item) => (
+              <div className="menu-card" key={item.id}>
+                <img src={item.image} alt={item.name} className="menu-item-image" />
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                <p><strong>Price:</strong> ₹{item.price}</p>
+                <button>Order Now</button>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     </div>
   );
 };

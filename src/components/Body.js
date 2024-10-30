@@ -47,7 +47,8 @@ const Body = () => {
             onChange={(e) => {
               setsearchtext(e.target.value);
             }}
-          ></input>
+          ></input>&nbsp;&nbsp;&nbsp;&nbsp;
+         
           <button
             onClick={() => {
               console.log("in serach my filter restaurant", listofrest);

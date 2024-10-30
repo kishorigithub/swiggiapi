@@ -99,3 +99,151 @@
     font-size: 30px;
     list-style-type: none;
 }
+
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .menu-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px; /* Adjust as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+  
+  .menu-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-item-image {
+    width: 100%; /* Ensures the image fits the card */
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+ 
+
+  .about-container {
+    background-color: #f9f9f9; /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Restrict width for better readability */
+    margin: auto; /* Center the container */
+    text-align: center; /* Center text */
+  }
+  
+  .about-container h1 {
+    font-size: 2.5rem;
+    color: #333; /* Dark color for headings */
+  }
+  
+  .about-container h2 {
+    font-size: 1.8rem;
+    color: #555; /* Slightly lighter color */
+    margin: 10px 0;
+  }
+  
+  .about-container p {
+    font-size: 1.2rem;
+    color: #666; /* Text color for better readability */
+    line-height: 1.6; /* Space between lines */
+    margin: 20px 0;
+  }
+
+  
+  .contact-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .contact-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .form-group {
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color:black;
+    color: white;
+    height: 50px;
+    width: 150px;
+
+      
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .grocery-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .grocery-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .grocery-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.2s;
+  }
+  
+  .grocery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .grocery-item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  
