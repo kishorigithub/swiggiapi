@@ -15,7 +15,9 @@ const RestaurantMenu = () => {
     if (resInfo) {
       setLoading(false);
     }
+    console.log("resinfo",resInfo);
   }, [resInfo]);
+  
 
   if (loading) {
     return <Shimmer />;
@@ -76,8 +78,10 @@ const RestaurantMenu = () => {
           />
           <h1>{resInfo?.name}</h1>
           <ul className="data">
+            
+            
             <li><strong>Cuisines:</strong> {resInfo?.cuisines.join(", ")}</li>
-            <li><strong>Price for Two:</strong> ₹{resInfo?.costForTwo}</li>
+            <li><strong>Price for Two:</strong> ₹{resInfo?.costForTwo/100}</li>
             <li><strong>Ratings:</strong> {resInfo?.avgRating}</li>
             <li><strong>Delivery Time:</strong> {resInfo?.deliveryTime} mins</li>
           </ul>
