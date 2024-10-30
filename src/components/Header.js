@@ -12,7 +12,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="main">
       <div className="Logo-container">
         <img className="logo" src={LOGO_URL}></img>
       </div>

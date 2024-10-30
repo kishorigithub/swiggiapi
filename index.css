@@ -1,6 +1,11 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+.main{
+    display: flex;
+    justify-content: space-around;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -11,15 +16,20 @@
 }
 .logo{
     width: 130px;
+    margin-right: 50px;
 }
+
 .nav-items ul {
     display: flex;
-    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+
 
 }
 .nav-items ul li {
     padding: 10px;
     margin: 20px;
+    list-style: none;
     
 
 }
@@ -47,6 +57,7 @@
 .res-logo{
     padding: 5px;
     width: 190px;
+    height: 200px;
 }
 .filter-btn{
     margin: 10px;
@@ -56,6 +67,10 @@
 .login{
     padding: 0 10px;
     cursor: pointer;
+    width: 140px;
+    height: 40px;
+    margin-top: 20px;
+
     
     
 }
@@ -76,4 +91,11 @@
 .user-card{
     padding: 10px;
     border: 1px solid black;
+}
+.card{
+    color: black;
+}
+.data{
+    font-size: 30px;
+    list-style-type: none;
 }
